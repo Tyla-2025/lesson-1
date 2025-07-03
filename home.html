@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Home page</title>
+    </head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e6e6e6;
+            padding: 10px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 10;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+        }
+
+        li a:hover {
+            background-color: rgb(232, 8, 8);
+        }
+    </style>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+
+                <li><a href="6-about.html">About</a></li>
+
+                <li><a href="6-contact.html">C</a></li>
+            </ul>
+        </nav>
+        <h2>Interesting Information</h2>
+        <img scr="C:\Users\shyle\Desktop\tiger.png" />
+        <br />
+        <button onclick="tiger();">Read More!</button>
+        <p id="tiger-info"></p>
+
+       
+        <img scr="C:\Users\shyle\Desktop\lion.avif" />
+        <br />
+        <button onclick="lion();">Read More!</button>
+
+        <p id="lion-info"></p>
+
+        <script>
+            function tiger() {
+                document.getElementById("tiger-info").innerHTML = "The tiger is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes."
+            }
+            function lion() {
+                    document.getElementById("lion-info").innerHTML ="The lion is a large cat of the genus Panthera, native to Sub-Saharan Africa and India. It has a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at the tip of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane."
+            }
+        </script>
+    </body>
+</html>
