@@ -1,0 +1,76 @@
+<html>
+
+
+<head>
+    <title>Slide Show</title>
+    <style>
+        section {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+
+
+        /* Hide all slides initially */
+        .mySlides {
+            display: none;
+            width: 100%;
+            object-fit: cover;
+        }
+
+
+        /* Optional: Add a smooth fade transition */
+        .mySlides {
+            animation: fade 1.5s ease -in -out;
+        }
+
+
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- Slide Show -->
+    <section>
+        <img class="mySlides"
+            src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg"
+            height="500px" width="500px" alt="Slide 1">
+        <img class="mySlides"
+            src="https://images.pexels.com/photos/697259/pexels-photo-697259.jpeg?cs=srgb&dl=pexels-hieu-697259.jpg&fm=jpg"
+            height="500px" width="500px" alt="Slide 2">
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+
+
+</html>
+
