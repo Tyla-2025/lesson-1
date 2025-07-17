@@ -1,0 +1,48 @@
+.pimg3 {
+    position: relative;
+    opacity: 0.80;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Add this to style the text overlay */
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+.border {
+    border: 2px solid rgb(207, 37, 37);
+    padding: 10px;
+}
+
+.trans {
+    background-color: rgba(175, 148, 148, 0.5);
+}
+
+.pimg3 {
+    background-image: url('C://Users//shyle//Desktop//cross.jpeg');
+    min-height: 500px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.hh {
+    width: 500px;
+    height: 500px;
+    
+}
