@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c8f4f1;
+    color: #333;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+    color: #444;
+}
+
+
+.section-dark {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+.section-dark h2 {
+    font-size: 28px;
+}
+
+
+.section-dark p {
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+
+.pimg3 {
+    background-image: url('https://images.unsplash.com/photo-1506784365847-bbad939e9335');
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 5px;
+}
+
+
+.pizza-section {
+    padding: 20px;
+}
+
+
+.pizza-section p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.pizza-img {
+    float: right;
+    width: 170px;
+    height: 170px;
+    margin-left: 15px;
+    border-radius: 8px;
+}
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+}
