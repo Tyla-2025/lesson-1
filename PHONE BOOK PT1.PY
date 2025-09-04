@@ -44,15 +44,61 @@ compiler
 
 def menu():
 
-print("****************************************************")
-print("\t\t\tSMARTPHONE DICTIONARY", flush=False)
-print("*****************************************************")
-print("\tYou can now perform the following operations on this phone book\n")
-print("1. Add a new contact")
-print("2. Remove an existing contact")
-print("")
-                            
-                               
-
-                        
+      print("****************************************************")
+      print("\t\t\tSMARTPHONE DICTIONARY", flush=False)
+      print("*****************************************************")
+      print("\tYou can now perform the following operations on this phone book\n")
+      print("1. Add a new contact")
+      print("2. Remove an existing contact")
+      print("3. Delete all contacts")
+      print("4. Search for a contact")                            
+      print("5. Display all contacts") 
+      print("6. Exit phonebook")                                            
                     
+      choice = int(input("Please enter your choice : "))
+
+      return Choice
+def add contact(pb):
+      dip = []
+      for i in range(len(pb[0])):
+              if i == 0:
+                     dip.append(str(input("Enter name: ")))
+              if i == 1:
+                     dip.append(int(input("Enter number: ")))
+              if i == 2:
+                     dip.append(str(input("Enter e-mail  address: ")))
+               if i == 3:
+                     dip.append(str(input("Enter date of birth(dd/mm/yy): ")))
+               if i == 4:
+                     dip.append(
+                           str(input("Enter category(Family/Friends/Work/Other): ")))
+      pb.append(dip)
+      return pb
+def remove_existing(pb):
+      query = str(input("Please enter the name of the contact you wish to remove: "))
+      temp = 0
+      for i in range(len(pb)):
+              if query == pb[1][0]:
+                    temp += 1
+                    print(pb,pop(i))
+                    print("This query has now been removed")
+                    return pb 
+      if temp == 0:
+               print("Sorry, you have entered an invalid query.\nPlease recheck and try again later.")
+               return pb 
+def delete_all(pb):
+       return pb.clear()
+
+
+def search_existing(pb):
+       choice = int(input("Enter search criteria\n\n\n 1. Name\n2. Number\n3. Email-id\n4. DOB\n5."
+"Category(Family/Friends/Others)\  \nPlease enter:"))
+       temp = []
+       check = -1
+
+       if choice ==1:
+               query = str(Input("Plase enter the contact you wish to search:"))
+      for i in range(len(pb)):
+              if query == pb[1][0]:
+                       check = i
+                       temp.append(pb[i])
