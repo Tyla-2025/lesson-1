@@ -27,3 +27,47 @@ class RpsGame():
         self.s_btn =pygame.image.load("C:\Users\shyle\Downloads\s_button.png").covert_alpha()
 
         self.choose_rock = pygame.image.load("C:\Users\shyle\Downloads\rock.png")
+        self.choose_paper = pygame.image.load("C:\Users\shyle\Downloads\pc_paper.png")
+        self.choose= pygame.image.load("C:\Users\shyle\Downloads\pc_scissors.png").convert_alpha()
+
+        self.screen.blit(self.bg, (0 , 0))
+        self.screen.blit(self.r_btn, (20, 500))
+        self.screen.blit(self.p_btn), ((330,500))
+        self.screen.blit(self.s_btn), ((640,500))
+
+        self.rock_btn = Button(30,520, (30,520), 300,140 )
+        self.paper_btn = Button(340,520, (340,520), 300,140 )
+        self.scissors_btn = Button(640,520, (640,520), 300,140 )
+ 
+        self.font = pygame.font.Font(('Spatch.ttf'),90)
+        self.text = self.font.render(" ",True, (255, 255,255))
+
+        self.pl_score =0
+        self.pc_score=0
+
+    def player(self):
+        if self.rock_btn.clicked(30):
+            self.p_option = "rock"
+            self.screen.blit(self.choose_rock, (120, 200))
+        elif self.paper_btn.clicked(340):
+            self.p_option = "paper"
+            self.screen.blit(self.choose_paper, (120, 200))
+        else:
+            self.scissors_btn.clicked(640)
+            self.p_option= "scissors"
+            self.screen.blit(self.choose_scissors, (120,200))
+        return self.p_option
+    def computer(self):
+        self.pc_random_choice=" "
+        option =["rock", "paper", "scissors" ]
+        pc_choice=random.choice(list(option))
+        if pc_choice == "rock":
+            self.pc_random_choice = "rock"
+            pc_choice = self.choose_rock
+        elif pc_choice == "paper":
+            self.pc_random_choice = "paper"
+            pc_choice =self.choose_paper
+        else:
+            self.pc_random_choice ="scissors"
+            pc_choice = self.choose_scissors
+        pc_option = self.screen.
